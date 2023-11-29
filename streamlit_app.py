@@ -40,19 +40,9 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
-    
-    
+ 
 except URLError as e:
   streamlit.error()
-#import requests
-#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
-
-# normalises the json version
-#fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
-# outputs it as a table in a readable format
-#streamlit.dataframe(fruityvice_normalized)
-
-#dont run anything past here while we troubleshoot
 streamlit.stop()
 
 
